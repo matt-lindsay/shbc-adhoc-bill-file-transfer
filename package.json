@@ -1,0 +1,15 @@
+{
+  "name": "shbc-adhoc-bill-file-transfer",
+  "version": "1.0.0",
+  "description": "A tool to transfer a certain file to a different location on a daily basis.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "matt-lindsay",
+  "license": "MIT",
+  "dependencies": {
+    "moment": "^2.18.1",
+    "node-slackr": "^0.1.4"
+  }
+}

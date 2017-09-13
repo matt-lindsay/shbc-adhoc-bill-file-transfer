@@ -57,3 +57,7 @@ typings/
 # dotenv environment variables file
 .env
 
+# test directories
+.c9
+input
+output
