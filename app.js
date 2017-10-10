@@ -13,6 +13,7 @@ var date = moment().format('YYYYMMDD'), // create a date object for file date co
 
 // Change working directory the process is running in.   
 process.chdir(source);
+console.log(process.cwd());
 
 // Read the files within that directory.
 fs.readdir(source, function (err, files) {
@@ -27,8 +28,7 @@ fs.readdir(source, function (err, files) {
         fileList.forEach(function (item) {
             fs.createReadStream(item).pipe(fs.createWriteStream(destination + item));
         });
-        slack('All copied daddy!', 'good', 'File(s) copied.');
-        
+        slack('Files copied successfully!', 'good', 'File(s) copied.');
     }, function (error) {
         console.log('>>> CheckFilesPromise error ' + error);
         slack('Check Files Promise', 'warning', error.toString());
@@ -39,7 +39,7 @@ var checkFilesPromise = function (files, search) {
     return new Promise(function (resolve, reject) {
         
         files.forEach(function (item) {
-            //console.log(item);
+            console.log(item);
             // ...check it matches the search parameter...
             if (item.match(search)) {
                 var stats = fs.statSync(item);

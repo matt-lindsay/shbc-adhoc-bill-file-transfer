@@ -24,5 +24,6 @@ module.exports = function (message, color, title) {
     slack.notify(messages, function (err, result) {
         if (err) console.log('>>> Slack errors: ' + err + '. ');
         console.log('>>> Slack notification: ' + result + '.');
+        process.exit(0);
     });
 };
