@@ -1,5 +1,7 @@
 'use strict';
 
+require ('dotenv').config();
+
 const fs = require('fs');  // access the file system.
 const moment = require('moment'); // date / time tools.
 const slack = require('./slack.js');  // import Slack notification functionality.

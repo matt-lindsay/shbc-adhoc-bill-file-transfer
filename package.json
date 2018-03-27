@@ -12,5 +12,9 @@
     "dotenv": "^5.0.1",
     "moment": "^2.18.1",
     "node-slackr": "^0.1.4"
+  },
+  "devDependencies": {
+    "jscs": "^3.0.7",
+    "jshint": "^2.9.5"
   }
 }
