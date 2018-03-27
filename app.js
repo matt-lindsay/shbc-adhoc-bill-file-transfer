@@ -3,9 +3,9 @@
 const fs = require('fs');  // access the file system.
 const moment = require('moment'); // date / time tools.
 const slack = require('./slack.js');  // import Slack notification functionality.
-const source = process.env.envA; // environment variable defining the source directory.
-const destination = process.env.envB; // environment variable defining the destination directory.
-const searchParameter1 = process.env.env1; // environment variable defining a file search parameter.
+const source = process.env.envAA; // environment variable defining the source directory.
+const destination = process.env.envBB; // environment variable defining the destination directory.
+const searchParameter1 = process.env.env11; // environment variable defining a file search parameter.
 //const searchParameter2 = process.env.env2; // environment variable defining a file search parameter.
 
 var date = moment().format('YYYYMMDD'), // create a date object for file date comparison and the archive file name.
